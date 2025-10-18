@@ -57,7 +57,7 @@ const displayVideoDetails = video => {
          ${video.description}
         </p>
       </div>
-      <div><img src="${video.thumbnail}" alt=""></div>
+      <div><img src="${video.thumbnail}" class="object-cover w-full h-full" alt=""></div>
       <button onclick="closeModal()" class="float-end  bg-red-400 text-white font-bold p-3">Close</button>
     </div>
   `;
