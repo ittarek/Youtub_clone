@@ -160,7 +160,7 @@ const displayVideo = videos => {
             src="https://media.istockphoto.com/id/1344841941/vector/blue-verified-account-icon-approved-profile-sign-tick-in-rounded-corners-star-top-page-logo.jpg?s=1024x1024&w=is&k=20&c=tcJRy7xVzVho8Uo2FrqIXs0NNsahka9JVXSRZaWdwDk="
             alt=""
           />`
-        : 'Non verified'
+        : ''
     }</span> </div>
               <p class="text-gray-500 text-sm">${video.others.views} views</p>
             </div>
