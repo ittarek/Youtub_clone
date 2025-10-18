@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      .active {
+        background: red;
+        color: white;
+      }
+      .details_modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+    </style>
+  </head>
+  <body class="md:mx-18 mx-3 mb-11">
+    <!-- nav bar  -->
+    <header class="my-6 border-b-2 pb-6 border-gray-300">
+      <nav class="flex justify-between items-center">
+        <!-- div 1 for website name  -->
+        <div>
+          <img src="/asset/Logo.png" class="w-10/12 md:w-full" alt="logo" />
+          <!-- <h1>PH Tube</h1> -->
+        </div>
+        <!-- div 2 for searching  -->
+        <div>
+          <input onkeyup="getVideoBySearch()"
+          id="search"
+            placeholder="search"
+            type="text"
+            class="border-2 border-slate-400 rounded-lg p-2 w-10/12 md:w-full cursor-pointer" />
+        </div>
+        <!-- div 3 for sorting -->
+
+        <div>
+          <button class="sorting_by_view">
+            <p
+              class="font-semibold font-sens-serif bg-red-400 text-[#ffff] p-1 md:px-4 md:py-2 md:text-lg rounded cursor-pointer">
+              Sort by view
+            </p>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- navigation buttons -->
+    <section class="navigation_buttons flex justify-center items-center">
+      <div>
+        <button
+          onclick="fetchData()"
+          id="all_btn"
+          class="rounded px-2 font-[400] duration-300 cursor-pointer">
+          All
+        </button>
+      </div>
+    </section>
+
+    <!-- video section  -->
+    <section
+      id="video-container"
+      class="max-w-full mx-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-11">
+      <!-- card -->
+    </section>
+
+    <!-- details modal -->
+    <section class="details_modal"></section>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
